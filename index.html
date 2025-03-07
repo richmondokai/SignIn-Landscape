@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orderific Service Panel - Manage restaurant operations efficiently with BMS.">
+    <title>Orderific Service Panel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #fae0ce;
+        }
+        .left-section {
+            width: 350px;
+            height: 602px;
+            left: 100px;
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            background-image: url('https://s3-alpha-sig.figma.com/img/97c5/77dd/b047dd3c09ed673e80bc7a6d07bed063?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XT~sbdk~zOmkWF8LUamkfymr3JF8AbwlClTX9z~FY0UaJWyFdFLLhXmn65EyK29Z0X~mp7bU46n-PJOi-SjCK~ygjEW816U-Eje4Y-UfoTmeC7sw~YTG8QUcKYBRYjiJ5f3xZ-R3eLIQev1BcDAK7tdblPH0FQHHw2FULE9bdrLOrQTqMybOfj13sMpheswOz2TbCwxPMBr3VIncFn4mTywYhCbznPKfE8Z6LSlWAC-DIHw7efwGNfqviWlLMB2Jk6lNoH8MIkKGyPFLeSHtU8ZpfOEk4oGxo4bYzCfBrFtneCrv-V5kWc78GuWy-tBOUCZ6zMzLWCKyseY5EAvUVw__');
+            background-size: cover;
+            background-position: center;
+            background-color: #ff8945; /* Fallback color */
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            text-align: left;
+            color: white;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 94, 0, 0.6);
+            z-index: 1;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 95px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+        .logo img {
+            width: 120px;
+            height: 40px;
+        }
+        .left-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .left-content h1 {
+            font-size: 2.7em;
+            margin-bottom: 2px;
+            text-align: center;
+            width: 100%;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .left-content p {
+            font-size: 0.8em;
+            line-height: 1.1;
+            margin-left: 20px;
+            text-align: left;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .right-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 320px;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .input-group input {
+            width: 75%;
+            padding: 10px 40px 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .input-group .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px 40px 10px 40px;
+            border-radius: 20px;
+            background: black;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="left-section">
+            <div class="overlay"></div>
+            <div class="logo">
+                <img src="Logo.png" alt="Orderific Logo" loading="lazy"> <!-- Replace with your logo URL -->
+            </div>
+            <div class="left-content">
+                <h1>Service Panel</h1>
+                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <form class="login-form">
+                <h2>Welcome Back</h2>
+                <p style="text-align: center; font-size: 12px;">Manage, streamline, and thrive effortlessly.</p>
+                
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                    <span class="eye-icon">👁</span>
+                </div>
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Login with Code</a>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+        </div>
+</body>
+</html>
