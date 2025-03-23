@@ -48,27 +48,45 @@
         }
 
         .orderific-hero {
-            background-image: url('https://s3-alpha-sig.figma.com/img/97c5/77dd/b047dd3c09ed673e80bc7a6d07bed063?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=poldCS4KI07AuZmz~Jus-x9QOltX~QHfnJK6ou6KOPiOMTdinyvYZ3zFEM6CAR92tnk36z2sCHiekpA-h1WOg70zmJB7wMfO0R9z3FETgSZx76280I6E~WS-y6~a4KCuxobeEudI~uQXkmKPtertlQRaGQoQU6xzQntpl~ZsmjSgIB9OWAtlAE9Qjm3JisCcdsVyGrDf7HdLgeOHPaB70Mv6hK3ZzK3jNgpMK6-4OPUJmRRx7Q1HnKVAZsQFvZMZTsm6GQ9ijj9KRrHM~~rT8Bk5DArhz4HasRyK8Um-EeeFMXJjoFRv2nxnc1vhh2muyxjY13MuOaVrDFEZzt-iXQ__');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            padding: 40px;
-            border-radius: 30px;
-            width: 480px;
-            height: 100%;
-        }
+    background-image: url('rider.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 40px;
+    border-radius: 30px;
+    width: 480px;
+    height: 100%;
+    overflow: hidden; /* Ensures overlays do not spill outside */
+}
 
-        .orderific-hero::before {
-            content: '';
-            position: absolute;
-            border-radius: 30px;
-            top: 0;
-            left: 0;
-            width: 480px;
-            height: 100%;
-            background: rgba(255, 86, 52, 0.5);
-            z-index: 1;
-        }
+/* First overlay - Orange */
+.orderific-hero::before {
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 86, 52, 0.5);
+    z-index: 1;
+}
+
+/* Second overlay - Black */
+.orderific-hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+
+
 
         .orderific-content {
             position: relative;
