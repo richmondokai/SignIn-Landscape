@@ -48,16 +48,16 @@
         }
 
         .orderific-hero {
-    background-image: url('rider.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 40px;
-    border-radius: 30px;
-    width: 480px;
-    height: 100%;
-    overflow: hidden; /* Ensures overlays do not spill outside */
-}
+        background-image: url('rider.png');
+        background-size: cover;
+        position: relative;
+        padding: 40px;
+        border-radius: 30px;
+        background-color: #ff5524;
+        width: 480px;
+        max-width: 100%;
+        min-height: 300px;
+    }
 
 /* First overlay - Orange */
 .orderific-hero::before {
@@ -66,11 +66,11 @@
     border-radius: 30px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 480px;
     height: 100%;
     background: rgba(255, 86, 52, 0.5);
     z-index: 1;
-}
+    }
 
 /* Second overlay - Black */
 .orderific-hero::after {
@@ -79,7 +79,7 @@
     border-radius: 30px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 480px;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 2;
@@ -98,7 +98,7 @@
         }
 
         .orderific-logo {
-            width: 168px;
+            width: 180px;
         }
 
         .orderific-title {
@@ -149,13 +149,15 @@
         }
 
         .orderific-label {
-            font-size: 16px;
+            font-size: 13px;
             color: rgba(0, 0, 0, 0.6);
             margin-bottom: 8px;
             display: block;
             font-weight: 700;
             padding-left: 16px;
-        }
+            width: 328px;
+            height: 16px;
+    }
 
         .orderific-form input[type="email"],
         .orderific-form input[type="password"] {
@@ -191,7 +193,7 @@
         .orderific-options label {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: #666;
         }
 
@@ -224,23 +226,30 @@
             text-decoration: underline;
         }
 
+        .orderific-options a {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline; /* Permanent underline */
+    font-size: 16px;
+    font-weight: 500;
+   }
+
         .orderific-form button {
             background-color: rgba(0, 0, 0, 1);
-            color: rgba(255, 255, 255, 1);
-            padding-left: 32px;
-            padding-right: 32px;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-align: center;
-            width: 100%;
-            margin-top: 26px;
-            height: 48px;
-        }
+        color: rgba(255, 255, 255, 1);
+        padding-left: 32px;
+        padding-right: 32px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+        width: 100%;
+        margin-top: 26px;
+        height: 48px;
+    }
 
         .orderific-form button:hover {
             background-color: rgba(0, 0, 0, 0.05);
@@ -459,7 +468,7 @@
                         <p class="orderific-subtitle">Manage, streamline, and thrive effortlessly.</p>
                         <form action="OTP.html" method="post">
                             <label class="orderific-label">Email</label>
-                            <input type="email" placeholder="Enter your Email" required><br>
+                            <input type="email" placeholder="Enter your email" required><br>
                             <label class="orderific-label">Password</label>
                             <div class="orderific-password">
                                 <input type="password" placeholder="••••••••" required>
